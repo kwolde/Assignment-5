@@ -1,0 +1,49 @@
+nav {
+    @include setBox(540px, 190px, right);
+    float:left;
+
+    ul {
+        list-style-type: none;
+        margin-top: 95px;
+
+        li {
+            display: inline;
+            font-size: 0.8em;
+            margin-right: 10px;
+
+            a {
+                color: $main-red;
+                text-decoration: none;
+                letter-spacing: -0.01em;
+                &:hover {
+                    color: $white;
+                }
+            }
+
+            @include break(959px){
+                font-size: 1em;
+                margin: 0 10px;
+            }
+        
+            @include break(767px){
+                font-size: 0.8em;
+                margin: 0 5px;
+            }
+        }
+
+        @include break(959px){
+            margin-top: 0;
+        }
+    }
+
+    @include break(959px){
+        width: inherit;
+        height: 50px;
+        float: none;
+        text-align: center;
+    }
+
+    @include break(459px){
+        margin-bottom: 40px !important;
+    }
+}

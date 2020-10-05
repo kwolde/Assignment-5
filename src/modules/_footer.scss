@@ -1,0 +1,66 @@
+.greybar {
+    @include setBox(100%, 90px, null, $greybar-bg);
+    clear: both;
+    padding-top: 30px;
+
+    @include break(459px) {
+        display: none;
+    }
+}
+
+footer {
+    @include setBox(100%, 120px, center, $footer-bg);
+    color: $white;
+    padding-top: 50px;
+
+    p {
+        @include break(459px){
+            float: none;
+            margin: 0;
+        }
+    }
+
+    img {
+        @include break(459px){
+            float: none;
+            margin: 0;
+        }
+    }
+
+    @include break(459px){
+        text-align: center;
+    }
+}
+
+.social-media {
+    margin: 0 auto;
+    width: 165px;
+    
+    div {
+        float: left;
+        margin-right: 5px;
+    }
+    
+    a {
+        display: block;
+        width: 36px;
+        height: 36px;
+        text-indent: -9999px;
+    }
+    
+    div.one {
+        background: $social-image 0 0;
+    }
+    
+    div.two {
+        background: $social-image -38px 0;
+    }
+    
+    div.three {
+        background: $social-image -76px 0;
+    }
+    
+    div.four {
+        background: $social-image -114px 0;
+    }
+}
